@@ -3,9 +3,9 @@ package parser
 import (
 	"bytes"
 	"fmt"
-	"github.com/feedcast-io/parser/internal/handlers"
-	"github.com/feedcast-io/parser/internal/sanitizers"
+	"github.com/feedcast-io/parser/handlers"
 	"github.com/feedcast-io/parser/resources"
+	"github.com/feedcast-io/parser/sanitizers"
 	"io"
 	"log/slog"
 	"os"

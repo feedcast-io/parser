@@ -8,7 +8,7 @@ import (
 )
 
 func TestGetFromXml(t *testing.T) {
-	files, err := filepath.Glob("../../samples/*.xml")
+	files, err := filepath.Glob("../samples/*.xml")
 
 	if err != nil {
 		t.Fatal("Fatal", err)
@@ -28,7 +28,7 @@ func TestGetFromXml(t *testing.T) {
 }
 
 func TestGetHugeXmlUnknownFormat(t *testing.T) {
-	file, err := os.Open("../../samples/huge-xml.txt")
+	file, err := os.Open("../samples/huge-xml.txt")
 	if nil != err {
 		t.Fatal("Fatal", err)
 	}

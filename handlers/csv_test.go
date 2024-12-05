@@ -8,7 +8,7 @@ import (
 )
 
 func TestGetFromCsv(t *testing.T) {
-	files, err := filepath.Glob("../../samples/*.csv")
+	files, err := filepath.Glob("../samples/*.csv")
 
 	if err != nil {
 		t.Fatal("Fatal", err)
