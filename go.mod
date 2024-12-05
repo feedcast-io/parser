@@ -1,6 +1,6 @@
 module github.com/feedcast-io/parser
 
-go 1.22
+go 1.23.3
 
 require (
 	cloud.google.com/go/auth v0.10.2 // indirect
