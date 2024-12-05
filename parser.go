@@ -22,10 +22,10 @@ func GetProducts(config resources.Config) (chan []resources.Product, chan error)
 
 	// Other remote file source : download and process locally
 	localFile, err := downloadFile(config.Url)
-	defer localFile.Close()
-	defer os.Remove(localFile.Name())
-
-	if err != nil {
+	if err == nil {
+		defer localFile.Close()
+		defer os.Remove(localFile.Name())
+	} else {
 		return getChanResultError(err)
 	}
 

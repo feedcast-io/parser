@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-func TestGetProducts(t *testing.T) {
+func TestGetProductsFromUrl(t *testing.T) {
 	p, e := GetProducts(resources.Config{
 		Url: "https://www.champion-direct.com/gmerchantcentera1023cc2badef4fe64943c9fd1257a7c.fr.shop1.xml",
 	})
