@@ -69,6 +69,10 @@ func TestPrice_ParseString(t *testing.T) {
 	p.ParseString(raw)
 	validPrice(t, p, raw, 6995, "XAT")
 
+	raw = "6.847,80 EUR"
+	p.ParseString(raw)
+	validPrice(t, p, raw, 6847.80, "EUR")
+
 	raw = "EUR"
 	p.ParseString(raw)
 	if p.IsDefined {

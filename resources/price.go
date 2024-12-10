@@ -26,6 +26,14 @@ func (p *Price) ParseString(raw string) {
 	p.CurrencyCode = ""
 	p.IsDefined = false
 
+	dotPos := strings.Index(raw, ".")
+	commaPos := strings.Index(raw, ",")
+
+	if dotPos > 0 && commaPos > 0 && dotPos < commaPos {
+		// Fix US Format 1.234,56 => 1234.56
+		raw = strings.Replace(raw, ".", "", 1)
+	}
+
 	raw = strings.ToUpper(raw)
 	raw = strings.ReplaceAll(raw, " ", "")
 
